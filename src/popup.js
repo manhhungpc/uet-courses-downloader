@@ -73,6 +73,7 @@ const startDownload = (tab) => {
             if (loading.style.display == "block") loadingLabel.textContent += " Đang tải, bạn chờ tí nhé!";
         }, 10000);
 
+        console.log(downloadList);
         chrome.runtime.onMessage.addListener(function (response, sender) {
             let fail = 0;
             if (response.percent) {
@@ -83,6 +84,12 @@ const startDownload = (tab) => {
                 ).style.cssText = `font-weight: 600; color: #4bb543;`;
             }
             if (response.downloaded) {
+                document.querySelectorAll(".file-label").forEach((label) => {
+                    if (!downloadList.find((download) => download.fileName === label.childNodes[1].textContent)) {
+                        label.parentElement.childNodes[1].textContent = "100%";
+                        label.parentElement.childNodes[1].style.display = "none";
+                    }
+                });
                 const listPercent = document.querySelectorAll(".show-percent");
                 listPercent.forEach((data) => {
                     if (data.textContent != "100%") {
@@ -93,7 +100,7 @@ const startDownload = (tab) => {
                     }
                 });
                 loadingLabel.textContent = "Đã tải xong :>";
-                document.getElementById("success").textContent = `Tải ${listPercent.length - fail} file thành công`;
+                document.getElementById("success").textContent = `Tải ${downloadList.length - fail} file thành công`;
                 errorDisplay.textContent = fail != 0 ? `Có ${fail} file lỗi` : "";
 
                 loading.style.display = "none";
