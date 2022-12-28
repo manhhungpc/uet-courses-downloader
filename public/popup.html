@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>My Chrome Extension</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+
+<body>
+  <div class="app">
+    <p id="title">Bạn muốn tải về <span id="num-files"></span> file?</p>
+    <div id="list-files">
+      <!-- Set the list of download file here -->
+    </div>
+
+    <div class="container-loading">
+      <div id="loading"></div>
+      <span id="loading-label"></span>
+    </div>
+    <div id="success"></div>
+    <div id="error"></div>
+
+    <button id="download">Tải xuống</button>
+    <button id="set-checked">Bỏ chọn toàn bộ</button>
+    <!-- <button id="cancel">Hủy</button> -->
+    <div>
+      <small id="credit">
+        Made by <a href="https://www.facebook.com/manhhung.kode1620/" target="_blank">Manh Hung</a> from UET with
+        <span style="color: #ff0000;">&#10084;</span>
+      </small>
+    </div>
+  </div>
+
+  <script type="module" src="popup.js"></script>
+</body>
+
+</html>

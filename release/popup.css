@@ -1,0 +1,102 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 400px;
+    min-height: 200px;
+}
+
+#title {
+    font-size: 18px;
+}
+
+.wrap-list-file {
+    border-bottom: 2px solid #888888;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.file-checkbox {
+    accent-color: #004683;
+}
+
+.file-label {
+    width: 85%;
+}
+
+#download {
+    background-color: #004683;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 3px 8px;
+    margin: 10px 3px 10px 0;
+}
+
+#set-checked {
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #004683;
+    border-radius: 3px;
+    padding: 3px 8px;
+    margin: 10px 0;
+}
+
+#download:hover,
+#set-checked:hover {
+    cursor: pointer;
+    background-color: #237fd0;
+    color: #fff;
+}
+
+.container-loading {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+}
+
+#loading {
+    display: none;
+    border: 3px solid #ddd;
+    border-radius: 50%;
+    border-top: 3px solid #004683;
+    width: 10px;
+    height: 10px;
+    animation: spin 1s linear infinite;
+    margin-right: 5px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#error {
+    font-weight: 600;
+    color: #ff3333;
+}
+
+#success {
+    font-weight: 600;
+    color: #4bb543;
+}
+
+#credit {
+    color: #888888;
+}
+
+#credit > a {
+    text-decoration: none;
+    color: #888888;
+}
+
