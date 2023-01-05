@@ -1,5 +1,7 @@
 # Uet Course Downloader
 
+Now you can download it from [Chrome Web Store](https://chrome.google.com/webstore/detail/uet-course-downloader/kllkdnfcfcigipjidfhennjadddocefm?hl=en-US)
+
 ## Features
 
 - Choose 1 or many files to download in a course

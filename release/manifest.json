@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
     "name": "Uet Course Downloader",
-    "version": "1.0.0",
-    "author": "Manh Hung",
+    "version": "1.0.1",
+    "author": "Pham Cong Manh Hung",
     "description": "Nén và tải nhiều file cho 1 khóa học trên trang courses.uet.vnu.edu.vn",
     "icons": {
         "16": "icons/icon_uet.png",
@@ -14,7 +14,6 @@
         "default_title": "Uet Course Downloader",
         "default_popup": "popup.html"
     },
-    "permissions": ["downloads", "scripting"],
     "content_scripts": [
         {
             "matches": ["https://courses.uet.vnu.edu.vn/course/view.php?id=*"],

@@ -3,6 +3,7 @@
 
 # production
 /build
+release-*.zip
 
 # misc
 .DS_Store
